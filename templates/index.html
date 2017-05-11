@@ -3,16 +3,103 @@
 {% load static %}
 
 {% block content %}
-        <div class="container-fluid">
+        <div class="container-fluid bg-header">
+                <header class="header fixed clearfix">
+                       <div class="container">
+                               <div class="row">
+                                       <div class="col-md-3">
+                                               <div class="header-left clearfix">
+                                                       <div class="logo">
+                                                               <!-- <a href="index.html" title="Torna alla Home">
+                                                                       <img id="logo" src="images/logo-e-foto-360.png" alt="logo e-foto360">                                                                                                                                                    
+                                                               </a> -->
+                                                        </div>
+                                                        <div class="site-slogan">
+                                                               esperienza, professionalità e ingegno al vostro servizio                                                               
+                                                        </div>
+                                                 </div>
+                                         </div>
+                                         <div class="col-md-2 col-md-offset-7 text-center link-social">
+                                                <a href="#" title="Pagina Facebook">
+                                                        <i class="fa fa-facebook"></i>                                                                                                                                                   
+                                                </a>
+                                                <a href="#" title="Pagina Twitter">
+                                                        <i class="fa fa-twitter"></i>                                                                                                                                                   
+                                                </a>
+                                                <a href="#" title="Pagina Instagram">
+                                                        <i class="fa fa-instagram"></i>                                                                                                                                                   
+                                                </a>
+                                         </div>
+                                  </div>
+                                  <div class="row">
+                                         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                                                 <div class="header-right clearfix">
+                                                        <div class="main-navigation animated">                                                      
+                                                                <nav class="navbar navbar-default" role="navigation">
+                                                                        <div class="container-fluid">
+                                                                               <div class="navbar-header">
+                                                                                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                                                               <span class="sr-only">Toggle navigation</span>
+                                                                                               <span class="icon-bar"></span>
+                                                                                               <span class="icon-bar"></span>
+                                                                                               <span class="icon-bar"></span>
+                                                                                       </button>
+                                                                                </div>
+                                                                                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                                                                        <ul class="nav navbar-nav">
+                                                                                              <li class="active">
+                                                                                                     <a href="index.html" title="Home">Home</a>
+                                                                                              </li>                                                                                                    
+                                                                                              <li class="button">
+                                                                                                     <a href="#ristorante" title="Ristorante">Ristorante</a>
+                                                                                              </li>
+                                                                                              <li class="button">
+                                                                                                     <a href="#menu" title="Menu">Menu</a>
+                                                                                              </li>                                                                                                   
+                                                                                                <li class="button ">
+                                                                                                       <a href="#team" title="Team">Team</a>                                                                                                        
+                                                                                               </li>                                                                                                   
+                                                                                               <li class="button">
+                                                                                                       <a href="#contatti" title="Contatti">Contatti</a>
+                                                                                               </li>
+                                                                                        </ul>
+                                                                                </div>
+                                                                        </div>
+                                                                </nav>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
                 <div class="container">
-                        <div class="gallery-cover" {% if contenuto.immagine_box_1 %} style="background-image: url('{{contenuto.immagine_box_1.url}}');" {% endif %}  >
+                        <div class="gallery-cover" >
 		               <div class="container container-gallery">
 		                       <div class="titolo-gallery">
 		                               <h1>{% trans "Gallery fotografica"%}</h1>               
 		                               <p>{% trans "Immagini di tante edizioni che rappresentano la storia del Mastrogiurato" %}</p>
-		                               <img src="{{contenuto.immagine_box_1.url}}"/>           
-		                               <br>
-		                               <img src="{% static 'img/frecciafucsia.jpg' %}"/>    
+		                               <div class="row">
+		                               {% if contenuto.immagine_box_1 %}
+		                                      <div class="col-sm-3">
+		                                              <img src="{{contenuto.immagine_box_1.url}}"/>        
+		                                      </div>   		                               
+		                               {% endif %}				                               	                             
+		                               {% if contenuto.immagine_box_2 %}
+		                                      <div class="col-sm-3">
+		                                              <img src="{{contenuto.immagine_box_2.url}}"/> 
+		                                      </div>  
+		                                {% endif %}
+		                               {% if contenuto.immagine_box_3 %}
+		                                      <div class="col-sm-3">
+                                                                <img src="{{contenuto.immagine_box_3.url}}"/> 
+                                                        </div>  
+                                                {% endif %}
+                                               {% if contenuto.immagine_box_4 %}
+                                                        <div class="col-sm-3">
+                                                                <img src="{{contenuto.immagine_box_4.url}}"/>
+                                                        </div>   
+                                                {% endif %}
+                                                </div>
 		                       </div>          
 		               </div>
 		       </div>
