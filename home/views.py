@@ -12,6 +12,7 @@ def home(request):
                              {
                               'contenuto':contenuto,
                               'gallery':foto,
+                              'page':'home',
                               },
                              RequestContext(request))
                              
