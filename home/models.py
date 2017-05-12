@@ -34,3 +34,36 @@ class Slide(models.Model):
         return u'<img style="max-width:150px" src="%s" />' % (self.immagine.url)
     admin_thumbnail.short_description = 'Thumbnail'
     admin_thumbnail.allow_tags = True
+    
+class About(models.Model):   
+    immagine_box_1 = models.FileField(max_length=500,blank=True,)
+    immagine_box_2 = models.FileField(max_length=500,blank=True,)
+    immagine_box_3 = models.FileField(max_length=500,blank=True,)
+    immagine_box_4 = models.FileField(max_length=500,blank=True,)
+    titolo_about = models.TextField(max_length=100, blank=True,)
+    testo_about = models.TextField(max_length=3000, blank=True,)
+    class Meta:
+        verbose_name="About"
+        verbose_name_plural="Modifica il contenuto della pagina About"
+        
+    def __unicode__(self):
+        return u"Modifica il contenuto della pagina About"
+        
+class Work(models.Model):   
+    screen = models.FileField(max_length=500,blank=True,)
+    logo = models.FileField(max_length=500,blank=True,)    
+    titolo_work = models.TextField(max_length=100, blank=True,)
+    descrizione_work = models.TextField(max_length=3000, blank=True,)
+    class Meta:
+        verbose_name="Work"
+        verbose_name_plural="Works"
+        
+    def __unicode__(self):
+        return u"Modifica il contenuto della pagina Work"
+        
+        
+        
+        
+        
+        
+        

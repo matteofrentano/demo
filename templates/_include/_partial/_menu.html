@@ -1,0 +1,12 @@
+<li class="{% ifequal page 'home'%}active{% endifequal %}">
+       <a href="{% url "home" %}" title="Home">Home</a>
+</li>                                                                                                    
+<li class="{% ifequal page 'about'%}active{% endifequal %}">
+       <a href="{% url "about" %}" title="About">About</a>
+</li>
+<li class="{% ifequal page 'work'%}active{% endifequal %}">
+       <a href="{% url "work" %}" title="Work">Work</a>
+</li>                                                                                                                                                                                                 
+ <li class="{% ifequal page 'contact'%}active{% endifequal %}">
+         <a href="{% url "contact" %}" title="Contact">Contact</a>
+ </li>

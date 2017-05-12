@@ -7,23 +7,31 @@
 	                <div class="row">
 	                        <div class="col-sm-4">
 	                                <div class="center tit-footer">
-	                                        Contenuto Uno
-	                                </div>
-	                                <a href=""></a>
+	                                        Vima-tech
+	                                </div>	                   
+	                                {% if contenuto.testo_footer %}
+                                               <p class="footer-text">{{contenuto.testo_footer}}</p>                                           
+                                        {% endif %}              
 	                        </div>
 	                        <div class="col-sm-4">
 	                                 <div class="center tit-footer">
-	                                        Contenuto Due
+	                                        Social
 	                                </div>
+	                                <div class="social-footer">
+	                                       {% include "_include/_partial/_social.html" %}
+	                                </div>	                                
 	                        </div>
 	                        <div class="col-sm-4">
 	                                <div class="center tit-footer">
-	                                         Contenuto Tre
+	                                         Page
 	                                </div>
+	                                <ul class="menu-footer">
+	                                       {% include "_include/_partial/_menu.html" %}
+	                                </ul>
 	                        </div>
 	                </div>
 	                <div class="row">
-	                        <p>Powered by <a href="http://vima-tech.it" title="Sito Vima" target="_blank">Vima</a>. All rights reserved</p>
+	                        <p class="sub">Powered by <a class="brand" href="http://vima-tech.it" title="Sito Vima" target="_blank">Vima</a>. All rights reserved</p>
 	                </div>
 	        </div>       
 	</div>

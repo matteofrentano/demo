@@ -15,16 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from home import views 
 from django.conf import settings
 from django.conf.urls.static import static
-
-
+from home import views
 
 urlpatterns = [
         url(r'^admin/', admin.site.urls),
         url(r'^$', views.home, name='home'),
-        url(r'^about/$',views.about,name="about"),   
+        url(r'^about/$', views.about,name="about"),   
         url(r'^work/$',views.work,name="work"), 
         url(r'^contact/$',views.contact,name="contact"), 
         

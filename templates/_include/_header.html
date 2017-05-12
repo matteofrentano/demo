@@ -18,15 +18,7 @@
                                           </div>
                                   </div>
                                   <div class="col-md-2 col-md-offset-7 text-center link-social">
-                                         <a href="https://www.facebook.com/vima.tech.web.solutions/?ref=ts&fref=ts" title="Pagina Facebook" target="_blank">
-                                                 <i class="fa fa-facebook"></i>                                                                                                                                                   
-                                         </a>
-                                         <a href="#" title="Pagina Twitter">
-                                                 <i class="fa fa-twitter"></i>                                                                                                                                                   
-                                         </a>
-                                         <a href="#" title="Pagina Instagram">
-                                                 <i class="fa fa-instagram"></i>                                                                                                                                                   
-                                         </a>
+                                         {% include "_include/_partial/_social.html" %}
                                   </div>
                            </div>
                            <div class="row">
@@ -45,18 +37,7 @@
                                                                          </div>
                                                                          <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                                                                  <ul class="nav navbar-nav">
-                                                                                       <li class="{% ifequal page 'home'%}active{% endifequal %}">
-                                                                                              <a href="{% url "home" %}" title="Home">Home</a>
-                                                                                       </li>                                                                                                    
-                                                                                       <li class="{% ifequal page 'about'%}active{% endifequal %}">
-                                                                                              <a href="{% url "about" %}" title="About">About</a>
-                                                                                       </li>
-                                                                                       <li class="{% ifequal page 'work'%}active{% endifequal %}">
-                                                                                              <a href="{% url "work" %}" title="Work">Work</a>
-                                                                                       </li>                                                                                                                                                                                                 
-                                                                                        <li class="{% ifequal page 'contact'%}active{% endifequal %}">
-                                                                                                <a href="{% url "contact" %}" title="Contact">Contact</a>
-                                                                                        </li>
+                                                                                        {% include "_include/_partial/_menu.html" %}
                                                                                  </ul>
                                                                          </div>
                                                                  </div>
