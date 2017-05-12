@@ -24,4 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
         url(r'^admin/', admin.site.urls),
         url(r'^$', views.home, name='home'),
+        url(r'^about/$',views.about,name="about"),   
+        url(r'^work/$',views.work,name="work"), 
+        url(r'^contact/$',views.contact,name="contact"), 
+        
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

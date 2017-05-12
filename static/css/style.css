@@ -1,6 +1,11 @@
 body{
 	background-color: #123456;
-	color: #fff;
+	color: #123456;
+	font-family: 'montserratregular';
+        src: url('montserrat-regular-webfont.woff2') format('woff2'),
+         url('montserrat-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
 }
 img{
 	width: 100%;
@@ -15,33 +20,67 @@ html, body {
     margin: 0 auto -140px;
 }
 .navbar-default{
-	background-color: #FF3311!important;
+	background-color: #fff!important;
 	background-image: none!important;
 	border: 0px;
 	box-shadow: none;
 }
-.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav li a {
-	color: #fff;
+header .header-left{
+	text-align: center;
+}
+.navbar-default .navbar-nav li a {
+	color: #123456;
+}
+.navbar-default .navbar-nav .active a{
+	color: #123456;
 }
 .navbar-default .navbar-nav .active a,  .navbar-default .navbar-nav .open a{
-        background-color: #123456;
+        background-color: #fff;
         background-image: none;
+        border-top: 1px solid #123456;
+        box-shadow: none;
+}
+.navbar-default .navbar-nav .active a,  .navbar-default .navbar-nav .open a, .navbar-default .navbar-nav .active a:hover,  .navbar-default .navbar-nav .open a:hover{
+        background-color: #fff;
+        background-image: none;
+        border-top: 1px solid #123456;
+        box-shadow: none;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-	color: #fff;
-	background-color: #123456;
+	color: #123456;
+	border-top: 1px solid #123456;
 }
-#footer, #push {
+.nav>li>a{
+	padding: 10px 10px;
+}
+footer, #push {
     height: 140px;
     clear: both;
 }
-
+img#logo{
+	max-width: 200px;
+	margin-top: 15px;
+}
+.link-social{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.site-slogan{
+	font-style: italic;
+}
+.link-social a{
+        margin-left: 20px;
+}
 a, a:hover{
-	color: #fff;
+	color: #123456;
 	text-decoration: none;
 }
+footer a{
+	border-bottom: 1px solid #123456;
+	padding-bottom: 4px;
+}
 .bg-header, footer{
-	background-color: #FF3311;
+	background-color: #FFF;
 }
 .gallery-cover{
 	background-size: cover;
@@ -56,8 +95,44 @@ footer p{
 }
 .tit-footer{
 	text-transform: uppercase;
-	border-bottom: 1px solid #fff;
-	font-size: 24px;
+	border-bottom: 1px solid #123456;
+	font-size: 20px;
 	margin-top: 15px;
 	padding-bottom: 10px;
+}
+.container-gallery{
+	color: #fff;
+}
+#contatti{
+	color: #fff;
+}
+#contatti .tit{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 15px 0 30px;
+}
+#contatti .text{
+        margin-bottom: 50px;
+}
+#google-map {	
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+}
+#google-map > iframe {
+	position: absolute;
+	top: 5%;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+}
+@media (max-width: 767px){
+	body{
+	        padding: 0px;	
+	}
+	footer, #push {
+	    height: 240px;
+	    clear: both;
+	}
 }

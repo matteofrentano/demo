@@ -1,0 +1,74 @@
+{% load static %}
+{% load i18n %}
+       
+
+         <header class="header fixed clearfix">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-3">
+                                        <div class="header-left clearfix">
+                                                <div class="logo">
+                                                        <a href="{% url "home" %}" title="Torna alla Home">
+                                                                <img id="logo" src="{% static "img/logo.png" %}" alt="logo Vima-tech">                                                                                                                                                    
+                                                        </a>
+                                                 </div>
+                                                 <div class="site-slogan">
+                                                        esperienza, professionalità e ingegno al vostro servizio                                                               
+                                                 </div>
+                                          </div>
+                                  </div>
+                                  <div class="col-md-2 col-md-offset-7 text-center link-social">
+                                         <a href="https://www.facebook.com/vima.tech.web.solutions/?ref=ts&fref=ts" title="Pagina Facebook" target="_blank">
+                                                 <i class="fa fa-facebook"></i>                                                                                                                                                   
+                                         </a>
+                                         <a href="#" title="Pagina Twitter">
+                                                 <i class="fa fa-twitter"></i>                                                                                                                                                   
+                                         </a>
+                                         <a href="#" title="Pagina Instagram">
+                                                 <i class="fa fa-instagram"></i>                                                                                                                                                   
+                                         </a>
+                                  </div>
+                           </div>
+                           <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+                                          <div class="header-right clearfix">
+                                                 <div class="main-navigation animated">                                                      
+                                                         <nav class="navbar navbar-default" role="navigation">
+                                                                 <div class="container-fluid">
+                                                                        <div class="navbar-header">
+                                                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                                                        <span class="sr-only">Toggle navigation</span>
+                                                                                        <span class="icon-bar"></span>
+                                                                                        <span class="icon-bar"></span>
+                                                                                        <span class="icon-bar"></span>
+                                                                                </button>
+                                                                         </div>
+                                                                         <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                                                                 <ul class="nav navbar-nav">
+                                                                                       <li class="active">
+                                                                                              <a href="{% url "home" %}" title="Home">Home</a>
+                                                                                       </li>                                                                                                    
+                                                                                       <li class="button">
+                                                                                              <a href="{% url "about" %}" title="About">About</a>
+                                                                                       </li>
+                                                                                       <li class="button">
+                                                                                              <a href="{% url "work" %}" title="Work">Work</a>
+                                                                                       </li>                                                                                                                                                                                                 
+                                                                                        <li class="button">
+                                                                                                <a href="{% url "contact" %}" title="Contact">Contact</a>
+                                                                                        </li>
+                                                                                 </ul>
+                                                                         </div>
+                                                                 </div>
+                                                         </nav>
+                                                 </div>
+                                         </div>
+                                 </div>
+                         </div>
+                 </div>
+         </header>                
+
+ 
+ 
+ 
+ 

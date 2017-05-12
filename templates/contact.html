@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div id="contatti">
+         <div class="container m-t-40">
+                 <div class="row">
+                         <div class="col-md-5">
+                                 <div class="tit">
+                                         Contatti
+                                 </div>
+                                 <div class="text">
+                                 Vima s.a.s. di Vittorio Lupinetti & C<br>
+                                 66034 Lanciano (Ch) <br>
+                                 mail: info@vima-tech.it
+                                 </div>
+                                 
+                                 <p class="text-right">Scrivici:</p>
+                                 <div class="footer-content" data-animation-effect="fadeInRightSmall" data-effect-delay="300">
+                                        <div class="alert alert-success hidden" id="MessageSent2">
+                                                 Abbiamo ricevuto il suo messaggio, la ricontattremo presto.
+                                        </div>
+                                        <div class="alert alert-danger hidden" id="MessageNotSent2">
+                                                 Oops! Qualcosa è andato storto, per favore aggiornare la pagina e riprovare.
+                                        </div>
+                                        <form action="send.php" role="form" id="footer-form">
+                                                 <div class="form-group has-feedback">
+                                                        <label class="sr-only" for="name2">Nome</label>
+                                                        <input type="text" class="form-control" id="name2" placeholder="Nome" name="name2">
+                                                        <i class="fa fa-user form-control-feedback"></i>
+                                                </div>
+                                                <div class="form-group has-feedback">
+                                                       <label class="sr-only" for="email2">Indirizzo Email</label>
+                                                       <input type="email" class="form-control" id="email2" placeholder="Email" name="email2">
+	                                               <i class="fa fa-envelope form-control-feedback"></i>
+                                                </div>
+                                                <div class="form-group has-feedback">
+                                                        <label class="sr-only" for="message2">Messaggio</label>
+                                                        <textarea class="form-control" rows="4" id="message2" placeholder="Messaggio" name="message2"></textarea>
+                                                        <i class="fa fa-pencil form-control-feedback"></i>
+                                                </div>
+                                                <div class="col-md-2 col-md-offset-10">
+                                                        <input type="submit" value="Invia" class="submit-button btn btn-default">
+                                                </div>
+                                        </form>
+                                 </div>
+                         </div>
+                         <div class="col-md-5 col-md-offset-2">
+                                 <div id="google-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.908209522401!2d14.39202431573886!3d42.23777395080747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330fdc451199917%3A0x799e1694a9c8b65b!2sVima+Di+Vittorio+Lupinetti+%26+C.+Sas!5e0!3m2!1sit!2sit!4v1494563176605" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				   </div>                                 
+                         </div>
+                 </div>
+         </div>
+ </div>
+ {% endblock %}
+ 
+                
+                
+ 
+ 
+ 
+ 

@@ -14,3 +14,12 @@ def home(request):
                               'gallery':foto,
                               },
                              RequestContext(request))
+                             
+def about(request):
+    return render(request,'about.html',{'page':'about'})
+    
+def work(request):
+    return render(request,'work.html',{'page':'work'})
+    
+def contact(request):
+    return render(request,'contact.html',{'page':'contact'})
