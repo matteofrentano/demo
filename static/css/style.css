@@ -25,6 +25,10 @@ html, body {
         background-size: cover;
 	min-height: 100vh;
 }
+.carousel-caption h3{
+	font-size: 28px;
+	font-weight: bold;
+}
 .button{
 	position: absolute;
 	bottom: 50px;

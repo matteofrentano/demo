@@ -12,22 +12,29 @@ def home(request):
                               'contenuto':contenuto,
                               'page':'home',
                               },
-                             RequestContext(request))
-                             
-
+                             RequestContext(request))                            
 
 def about(request):
         about = About.objects.first()
+        contenuto = Contenuto.objects.first() 
         return render(request,'about.html',{
                                  'about':about,
+                                 'contenuto':contenuto,
                                  'page':'about'
                                  })    
+                                 
 def work(request):
         work = Work.objects.all()
+        contenuto = Contenuto.objects.first() 
         return render(request,'work.html',{
                                 'work':work,
+                                'contenuto':contenuto,
                                 'page':'work'
                                 })
     
 def contact(request):
-        return render(request,'contact.html',{'page':'contact'})
+        contenuto = Contenuto.objects.first() 
+        return render(request,'contact.html',{
+                                'page':'contact',
+                                'contenuto':contenuto,
+                                })
