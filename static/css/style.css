@@ -17,11 +17,22 @@ img{
 html, body {
   height: 100%;
 }
-#content{
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -200px;
+.carousel-caption{
+	top: 0px;
+}
+.carousel-inner .item{	
+        background-repeat: no-repeat;
+        background-size: cover;
+	min-height: 100vh;
+}
+.button{
+	position: absolute;
+	bottom: 50px;
+	right: 16%;
+	z-index: 999;
+}
+.button a{
+        color: #fff;
 }
 .navbar-default{
 	background-color: #fff!important;
@@ -57,10 +68,25 @@ header .header-left{
 .nav>li>a{
 	padding: 10px 10px;
 }
-footer {;
-    display: table-row;
-     height:1px;
+.testi{
+	color: #fff;
 }
+.testi h1{
+	text-transform: uppercase;
+	margin-top: 25px;
+	font-size: 28px;
+	font-weight: bold;
+}
+.testi p.sottotit{
+	text-align: left;
+        font-size: 20px;
+        margin-top: 15px;
+}
+.testi p{
+	margin-top: 35px;
+	text-align: right;
+}
+
 img#logo{
 	max-width: 200px;
 	margin-top: 15px;
@@ -88,6 +114,10 @@ footer a.brand{
 }
 .gallery-cover{
 	background-size: cover;
+}
+footer {;
+    display: table-row;
+     height:1px;
 }
 footer p.sub{
 	margin-top: 14px;
@@ -136,6 +166,7 @@ ul.menu-footer > li.active{
 }
 .footer-text{
 	padding-top: 15px;
+	text-align: center;
 }
 #google-map {	
 	position: relative;

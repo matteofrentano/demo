@@ -2,38 +2,46 @@
 {% load i18n %}
 {% load static %}
 
-{% block content %}
-        <div class="container">
-                <div class="gallery-cover" >
-                        <div class="container container-gallery">
-                                <div class="titolo-gallery">
-                                        <h1>{% trans "Gallery fotografica"%}</h1>               
-                                        <p>{% trans "Immagini di tante edizioni che rappresentano la storia del Mastrogiurato" %}</p>
-                                        <div class="row">
-                                        {% if contenuto.immagine_box_1 %}
-                                               <div class="col-sm-3">
-                                                       <img src="{{contenuto.immagine_box_1.url}}"/>        
-                                               </div>                                           
-                                        {% endif %}                                                                                           
-                                        {% if contenuto.immagine_box_2 %}
-                                               <div class="col-sm-3">
-                                                       <img src="{{contenuto.immagine_box_2.url}}"/> 
-                                               </div>  
-                                         {% endif %}
-                                        {% if contenuto.immagine_box_3 %}
-                                               <div class="col-sm-3">
-                                                         <img src="{{contenuto.immagine_box_3.url}}"/> 
-                                                 </div>  
-                                         {% endif %}
-                                        {% if contenuto.immagine_box_4 %}
-                                                 <div class="col-sm-3">
-                                                         <img src="{{contenuto.immagine_box_4.url}}"/>
-                                                 </div>   
-                                         {% endif %}
-                                         </div>
-                                </div>          
-                        </div>
-                </div>
-         </div>
+{% block content %}        
+        <div class="container">               
+	        <div class="container">
+	                <div class="testi">
+	                        {% if contenuto.titolo_home %}
+	                        <h1>{{ contenuto.titolo_home}}</h1>
+	                        {% endif %}            
+	                        {% if contenuto.sottotitolo_home %}   
+	                        <p class="sottotit">{{contenuto.sottotitolo_home}}</p>
+	                        {% endif %}     
+	                        {% if contenuto.testo_home %}   
+                                <p>{{contenuto.testo_home}}</p>
+                                {% endif %}    
+	                        <div class="row">
+	                        {% if contenuto.immagine_box_1 %}
+	                               <div class="col-sm-3">
+	                                       <img src="{{contenuto.immagine_box_1.url}}"/>        
+	                               </div>                                           
+	                        {% endif %}                                                                                           
+	                        {% if contenuto.immagine_box_2 %}
+	                               <div class="col-sm-3">
+	                                       <img src="{{contenuto.immagine_box_2.url}}"/> 
+	                               </div>  
+	                         {% endif %}
+	                        {% if contenuto.immagine_box_3 %}
+	                               <div class="col-sm-3">
+	                                         <img src="{{contenuto.immagine_box_3.url}}"/> 
+	                                 </div>  
+	                         {% endif %}
+	                        {% if contenuto.immagine_box_4 %}
+	                                 <div class="col-sm-3">
+	                                         <img src="{{contenuto.immagine_box_4.url}}"/>
+	                                 </div>   
+	                         {% endif %}
+	                         </div>
+	                         {% if contenuto.sottotesto_home %}   
+                                 <p class="sottotesto">{{contenuto.sottotesto_home}}</p>
+                                 {% endif %}    
+	                </div>          
+	        </div>                
+        </div>
 	
 {% endblock %}

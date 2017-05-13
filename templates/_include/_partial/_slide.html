@@ -1,0 +1,34 @@
+{% load i18n %}
+{% load static %}
+
+<div id="mioCarousel" class="carousel slide">
+        <div class="carousel-inner">
+                {% for elem in slide %}
+		<div class="item {% if forloop.first  %}active{% endif %}" style="background-image: url('{{elem.immagine.url}}');">		      
+		      {% if elem.titolo %}
+		      <div class="carousel-caption">
+			       <h3>{{elem.titolo}}</h3>	                       
+                       </div>
+                       {% endif %}
+                       <div class="button">
+                                <a href="#header-sec"><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i></a>
+                       </div>
+		</div>
+		{% endfor %}		
+        </div>
+        {% for elem in slide %}
+	        {% if forloop.counter > 1 %}
+	        <ol class="carousel-indicators">		
+			{% for elem in slide %}
+			<li data-target="#mioCarousel" data-slide-to="{{forloop.counter}}"></li>
+			{% endfor %}
+		</ol>	
+		<a class="left carousel-control" href="#mioCarousel" data-slide="prev">
+	                <span class="icon-prev"></span>
+	        </a>
+	        <a class="right carousel-control" href="#mioCarousel" data-slide="next">
+	                <span class="icon-next"></span>
+	        </a>
+	        {% endif %}
+        {% endfor %}
+</div>

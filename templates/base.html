@@ -36,6 +36,9 @@
 		      
 	</head>
 	<body>
+	        {% if slide %}                
+                        {% include "_include/_partial/_slide.html" %}
+                {% endif %}
 	       <div id="content">
 		       <div class="container-fluid bg-header">
 		               {% include "_include/_header.html" %}
@@ -43,7 +46,7 @@
 	       
 		      {% block content %}
 		      {% endblock %}
-		      <div id="push"></div>		
+		      
 		</div>
 		
 		{% include "_include/_footer.html" %}

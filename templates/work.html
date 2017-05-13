@@ -6,9 +6,15 @@
 <div id="work">
         <div class="container">
                 <div class="row">
-                        {% if work %}
+                        {% if work %}                                
                                 {% for elem in work %}
 	                              <div class="col-sm-3">
+	                                       <div class="screen">
+	                                               {% if elem.screen %}
+	                                               <img class="img-screen" src="{{elem.screen.url}}" alt="Immagine del progetto">
+	                                               {% endif %}
+	                                               <div class={% if elem.titolo_work %}"visible"{% else %}"hidden"{% endif %}>{{elem.titolo_work}}</div>
+	                                       </div>
 	                                       {{elem.descrizione_work}}
 	                              </div>  
                                 {% endfor %}

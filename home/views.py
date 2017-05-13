@@ -4,14 +4,17 @@ from django.shortcuts import render_to_response,get_object_or_404,redirect
 from django.template import RequestContext
 
 def home(request):
-    
+        slide = Slide.objects.all()
         contenuto = Contenuto.objects.first()    
         return render_to_response('index.html',
                              {
+                             'slide':slide,
                               'contenuto':contenuto,
                               'page':'home',
                               },
                              RequestContext(request))
+                             
+
 
 def about(request):
         about = About.objects.first()
