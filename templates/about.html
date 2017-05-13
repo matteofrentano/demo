@@ -3,15 +3,74 @@
 {% load static %}
 
 {% block content %}
-        <div class="container">
-                <div class="row">
-			{% if about.immagine_box_2 %}
-			      <div class="col-sm-3">
-			              <img src="{{about.immagine_box_2.url}}"/> 
-			      </div>  
-			{% endif %}
-			<div>{{ about.titolo_about }}</div> 
-	       </div>
-	</div>
-                                         
+        <div class="container about-pag">
+                <div class="row tit">
+                        {% if about.titolo_about %}
+                                <p class="tit-about">{{about.titolo_about}}</p>
+                        {% endif %}
+                         {% if about.testo_about %}
+                                <p class="testo-about">{{about.testo_about}}</p>
+                        {% endif %}
+                </div>
+                <div class="row m-t-25">
+                        {% if about.immagine_box_1 %}
+                        <div class="col-sm-4 col-sm-offset-2">
+                                <img src="{{about.immagine_box_1.url}}"/>        
+                        </div>                                           
+                        {% endif %}                                               
+			<div class="col-sm-4">
+				{% if about.testo_box_1 %}
+				<p>{{about.testo_box_1}}</p>
+				{% endif %}
+			</div> 	
+		</div>
+		<div class="row m-t-25">			                                          
+                        <div class="col-sm-4 col-sm-offset-2">
+                                {% if about.testo_box_2 %}
+                                <p>{{about.testo_box_2}}</p>
+                                {% endif %}
+                        </div>		
+                        {% if about.immagine_box_2 %}
+                        <div class="col-sm-4">
+                                <img src="{{about.immagine_box_2.url}}"/>        
+                        </div>                                           
+                        {% endif %}     
+		</div>
+		<div class="row m-t-25">
+                        {% if about.immagine_box_3 %}
+                        <div class="col-sm-4 col-sm-offset-2">
+                                <img src="{{about.immagine_box_3.url}}"/>        
+                        </div>                                           
+                        {% endif %}                                               
+                        <div class="col-sm-4">
+                                {% if about.testo_box_3 %}
+                                <p>{{about.testo_box_3}}</p>
+                                {% endif %}
+                        </div>  
+                </div>
+                <div class="row m-t-25">                                                                  
+                        <div class="col-sm-4 col-sm-offset-2">
+                                {% if about.testo_box_4 %}
+                                <p>{{about.testo_box_4}}</p>
+                                {% endif %}
+                        </div>          
+                        {% if about.immagine_box_4 %}
+                        <div class="col-sm-4">
+                                <img src="{{about.immagine_box_4.url}}"/>        
+                        </div>                                           
+                        {% endif %}     
+                </div>
+                <div class="row m-t-25 m-b--25">
+                        {% if about.immagine_box_5 %}
+                        <div class="col-sm-4 col-sm-offset-2">
+                                <img src="{{about.immagine_box_5.url}}"/>        
+                        </div>                                           
+                        {% endif %}                                               
+                        <div class="col-sm-4">
+                                {% if about.testo_box_5 %}
+                                <p>{{about.testo_box_5}}</p>
+                                {% endif %}
+                        </div>  
+                </div>
+	</div>                                         
 {% endblock %}

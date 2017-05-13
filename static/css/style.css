@@ -17,6 +17,16 @@ img{
 html, body {
   height: 100%;
 }
+.pd-lr-2{
+	padding-left: 2px;
+	padding-right: 2px
+}
+.m-t-25{
+	margin-top: 25px;
+}
+.m-b--25{
+	margin-bottom: 25px;
+}
 .carousel-caption{
 	top: 0px;
 }
@@ -26,7 +36,7 @@ html, body {
 	min-height: 100vh;
 }
 .carousel-caption h3{
-	font-size: 28px;
+	font-size: 35px;
 	font-weight: bold;
 }
 .button{
@@ -89,6 +99,7 @@ header .header-left{
 .testi p{
 	margin-top: 35px;
 	text-align: right;
+	margin-bottom: 30px;
 }
 
 img#logo{
@@ -101,6 +112,17 @@ img#logo{
 }
 .site-slogan{
 	font-style: italic;
+}
+.box-servizi{
+	text-align: center;
+        background-color: #fff;
+        color: #123456;
+        padding: 30px 10px;
+        border-radius: 4px;
+}
+.box-servizi p{
+	text-align: center;
+	margin-bottom: 0px;
 }
 .link-social a{
         margin-left: 20px;
@@ -178,6 +200,20 @@ ul.menu-footer > li.active{
 	height: 0;
 	overflow: hidden;
 }
+.about-pag{
+	color: #fff;
+}
+.about-pag .tit{
+	text-align: center;
+}
+.about-pag .tit p.tit-about{
+	margin-top: 25px;
+        font-size: 28px;
+        font-weight: bold;
+}
+.about-pag p{
+	margin-top: 20px;
+}
 #google-map > iframe {
 	position: absolute;
 	top: 5%;
@@ -192,5 +228,18 @@ ul.menu-footer > li.active{
 	footer, #push {
 	    height: 240px;
 	    clear: both;
+	}
+	.box-servizi{
+	        margin-bottom: 1px;
+	}
+	.button{
+	       right: 50%;
+	       transform: translateX(12px);
+	}
+
+	ul.menu-footer > li {
+		list-style: none;
+		padding-bottom: 25px;
+		text-align: center;
 	}
 }

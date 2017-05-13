@@ -3,16 +3,7 @@ from django.db import models
 class Contenuto(models.Model):      
     titolo_home = models.TextField(max_length=100, blank=True,)
     sottotitolo_home = models.TextField(max_length=100, blank=True,)
-    testo_home = models.TextField(max_length=3000, blank=True,)
-    immagine_box_1 = models.FileField(max_length=500,blank=True,)
-    testo_box_1 = models.TextField(max_length=3000, blank=True,)
-    immagine_box_2 = models.FileField(max_length=500,blank=True,)
-    testo_box_2 = models.TextField(max_length=3000, blank=True,)
-    immagine_box_3 = models.FileField(max_length=500,blank=True,)
-    testo_box_3 = models.TextField(max_length=3000, blank=True,)
-    immagine_box_4 = models.FileField(max_length=500,blank=True,)
-    testo_box_4 = models.TextField(max_length=3000, blank=True,)   
-    
+    testo_home = models.TextField(max_length=3000, blank=True,)   
     sottotesto_home = models.TextField(max_length=3000, blank=True,)
     try:        
         testo_footer= RichTextField(max_length=100000,blank=True,)
@@ -45,9 +36,15 @@ class Slide(models.Model):
     
 class About(models.Model):   
     immagine_box_1 = models.FileField(max_length=500,blank=True,)
+    testo_box_1 = models.TextField(max_length=3000, blank=True,)
     immagine_box_2 = models.FileField(max_length=500,blank=True,)
+    testo_box_2 = models.TextField(max_length=3000, blank=True,)
     immagine_box_3 = models.FileField(max_length=500,blank=True,)
+    testo_box_3 = models.TextField(max_length=3000, blank=True,)
     immagine_box_4 = models.FileField(max_length=500,blank=True,)
+    testo_box_4 = models.TextField(max_length=3000, blank=True,) 
+    immagine_box_5 = models.FileField(max_length=500,blank=True,)
+    testo_box_5 = models.TextField(max_length=3000, blank=True,)   
     titolo_about = models.TextField(max_length=100, blank=True,)
     testo_about = models.TextField(max_length=3000, blank=True,)
     class Meta:
