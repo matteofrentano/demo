@@ -12,7 +12,7 @@
                                 <p class="testo-about">{{about.testo_about}}</p>
                         {% endif %}
                 </div>
-                <div class="row m-t-25">
+                <div class="row m-t-25 animated slideInRight">
                         {% if about.immagine_box_1 %}
                         <div class="col-sm-4 col-sm-offset-2">
                                 <img src="{{about.immagine_box_1.url}}"/>        
@@ -24,7 +24,7 @@
 				{% endif %}
 			</div> 	
 		</div>
-		<div class="row m-t-25">		
+		<div class="row m-t-25 animated slideInLeft">		
 		       {% if about.immagine_box_2 %}
                         <div class="col-sm-4 col-sm-push-6">
                                 <img src="{{about.immagine_box_2.url}}"/>        
@@ -35,8 +35,8 @@
                                 <p class="text-right">{{about.testo_box_2}}</p>
                                 {% endif %}
                         </div>                                                
-		</div>
-		<div class="row m-t-25">
+		</div> 
+		<div class="row m-t-25 animated slideInRight">
                         {% if about.immagine_box_3 %}
                         <div class="col-sm-4 col-sm-offset-2">
                                 <img src="{{about.immagine_box_3.url}}"/>        
@@ -48,7 +48,7 @@
                                 {% endif %}
                         </div>  
                 </div>
-                <div class="row m-t-25">           
+                <div class="row m-t-25 animated slideInLeft">           
                         {% if about.immagine_box_4 %}
                         <div class="col-sm-4 col-sm-push-6">
                                 <img src="{{about.immagine_box_4.url}}"/>        
@@ -60,7 +60,7 @@
                                 {% endif %}
                         </div>                        
                 </div>
-                <div class="row m-t-25 m-b--25">
+                <div class="row m-t-25 m-b--25 animated slideInRight">
                         {% if about.immagine_box_5 %}
                         <div class="col-sm-4 col-sm-offset-2">
                                 <img src="{{about.immagine_box_5.url}}"/>        

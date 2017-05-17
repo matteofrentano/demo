@@ -10,9 +10,11 @@
 			       <h3>{{elem.titolo}}</h3>	                       
                        </div>
                        {% endif %}
-                       <div class="button">
-                                <a href="#header-sec"><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i></a>
-                       </div>
+                       <a href="#header-sec">
+                                <div class="scroll-down">
+                                        <span><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+                                </div>
+                       </a>
 		</div>
 		{% endfor %}		
         </div>
@@ -32,3 +34,4 @@
 	        {% endif %}
         {% endfor %}
 </div>
+

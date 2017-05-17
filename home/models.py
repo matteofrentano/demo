@@ -56,8 +56,7 @@ class About(models.Model):
         return 'About'
         
 class Work(models.Model):   
-    screen = models.FileField(max_length=500,blank=True,)
-    logo = models.FileField(max_length=500,blank=True,)    
+    screen = models.FileField(max_length=500,blank=True,)   
     titolo_work = models.TextField(max_length=100, blank=True,)
     descrizione_work = models.TextField(max_length=3000, blank=True,)
     link = models.URLField(max_length=200, blank=True,)

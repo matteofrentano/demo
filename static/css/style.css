@@ -42,15 +42,38 @@ html, body {
 	font-size: 35px;
 	font-weight: bold;
 }
-.button{
+
+.scroll-down {
 	position: absolute;
-	bottom: 50px;
-	right: 16%;
-	z-index: 999;
+	left: 80%;
+	bottom: 40px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	margin-left: -15px;
+	display: block;
+	z-index: 10;
+	color: #fff;
 }
-.button a{
-        color: #fff;
+.scroll-down span{
+	position: relative;
+	color: #fff;
+	-webkit-animation-name: drop;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: running;
+	animation-name: drop;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	left: 30%;
 }
+
 .navbar-default{
 	background-color: #fff!important;
 	background-image: none!important;
