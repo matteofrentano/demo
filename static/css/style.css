@@ -27,6 +27,9 @@ html, body {
 .m-b--25{
 	margin-bottom: 25px;
 }
+.pos-rel{
+	position: relative;
+}
 .carousel-caption{
 	top: 0px;
 }
@@ -214,6 +217,20 @@ ul.menu-footer > li.active{
 .about-pag p{
 	margin-top: 20px;
 }
+.box-work{
+        width: 23%;
+        float:left;
+        margin: 1%;
+}
+.box-work:nth-of-type(2) {
+    float: right;
+}
+.tit-work{
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+}
 #google-map > iframe {
 	position: absolute;
 	top: 5%;
@@ -241,5 +258,10 @@ ul.menu-footer > li.active{
 		list-style: none;
 		padding-bottom: 25px;
 		text-align: center;
+	}
+	.box-work{
+	       width: auto;
+                float: none;
+                margin-bottom: 20px;
 	}
 }

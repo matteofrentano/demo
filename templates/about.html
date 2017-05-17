@@ -24,17 +24,17 @@
 				{% endif %}
 			</div> 	
 		</div>
-		<div class="row m-t-25">			                                          
-                        <div class="col-sm-4 col-sm-offset-2">
-                                {% if about.testo_box_2 %}
-                                <p>{{about.testo_box_2}}</p>
-                                {% endif %}
-                        </div>		
-                        {% if about.immagine_box_2 %}
-                        <div class="col-sm-4">
+		<div class="row m-t-25">		
+		       {% if about.immagine_box_2 %}
+                        <div class="col-sm-4 col-sm-push-6">
                                 <img src="{{about.immagine_box_2.url}}"/>        
                         </div>                                           
-                        {% endif %}     
+                        {% endif %}      	       		                                          
+                        <div class="col-sm-4 col-sm-pull-2">
+                                {% if about.testo_box_2 %}
+                                <p class="text-right">{{about.testo_box_2}}</p>
+                                {% endif %}
+                        </div>                                                
 		</div>
 		<div class="row m-t-25">
                         {% if about.immagine_box_3 %}
@@ -48,17 +48,17 @@
                                 {% endif %}
                         </div>  
                 </div>
-                <div class="row m-t-25">                                                                  
-                        <div class="col-sm-4 col-sm-offset-2">
-                                {% if about.testo_box_4 %}
-                                <p>{{about.testo_box_4}}</p>
-                                {% endif %}
-                        </div>          
+                <div class="row m-t-25">           
                         {% if about.immagine_box_4 %}
-                        <div class="col-sm-4">
+                        <div class="col-sm-4 col-sm-push-6">
                                 <img src="{{about.immagine_box_4.url}}"/>        
                         </div>                                           
-                        {% endif %}     
+                        {% endif %}                                                          
+                        <div class="col-sm-4 col-sm-pull-2">
+                                {% if about.testo_box_4 %}
+                                <p class="text-right">{{about.testo_box_4}}</p>
+                                {% endif %}
+                        </div>                        
                 </div>
                 <div class="row m-t-25 m-b--25">
                         {% if about.immagine_box_5 %}

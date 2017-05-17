@@ -59,6 +59,7 @@ class Work(models.Model):
     logo = models.FileField(max_length=500,blank=True,)    
     titolo_work = models.TextField(max_length=100, blank=True,)
     descrizione_work = models.TextField(max_length=3000, blank=True,)
+    link = models.URLField(max_length=200, blank=True,)
     class Meta:
         verbose_name="Work"
         verbose_name_plural="Modifica il contenuto della pagina Work"
