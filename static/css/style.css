@@ -30,19 +30,47 @@ html, body {
 .pos-rel{
 	position: relative;
 }
-.carousel-caption{
-	top: 0px;
-}
-.carousel-inner .item{	
+.carousel-inner .item{  
         background-repeat: no-repeat;
         background-size: cover;
-	min-height: 100vh;
+        min-height: 100vh;
+}
+.carousel-caption{
+	top: 0px;
+	position: absolute;
+	display: block;
+        z-index: 10;
 }
 .carousel-caption h3{
 	font-size: 35px;
+	width: 100%;
 	font-weight: bold;
+	position: relative;
+	left: 50%;
+        transform: translateX(-50%);
+        -webkit-animation-name: opac;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-play-state: running;
+        animation-name: opac ;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
 }
-
+@-webkit-keyframes opac {
+        0%   { opacity: 0;}
+        30%  { opacity: 1;}
+        100% { opacity: 0;}
+}
+@keyframes opac {
+        0%   { opacity: 0;}
+        30%  { opacity: 1;}
+        100% {  opacity: 0;}
+}
 .scroll-down {
 	position: absolute;
 	left: 80%;
@@ -73,7 +101,17 @@ html, body {
 	animation-play-state: running;
 	left: 30%;
 }
+@-webkit-keyframes drop {
+        0%   { top:0px;  opacity: 0;}
+        30%  { top:10px; opacity: 1;}
+        100% { top:25px; opacity: 0;}
+}
 
+@keyframes drop {
+        0%   { top:0px;  opacity: 0;}
+        30%  { top:10px; opacity: 1;}
+        100% { top:25px; opacity: 0;}
+}
 .navbar-default{
 	background-color: #fff!important;
 	background-image: none!important;
