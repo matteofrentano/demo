@@ -25,6 +25,10 @@
 		<!-- Font  -->
                 <link href="{% static "fonts/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">  
                 <link href="{% static "fonts/montserrat/stylesheet.css" %}" rel="stylesheet">      
+                
+                <!-- OpenGraph -->
+                {% block opengraph %}		        
+		{% endblock %}
 				
 		<meta name="description" content="{% block meta_description %}{% endblock %}">
 		<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">

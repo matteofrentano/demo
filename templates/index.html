@@ -2,6 +2,20 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}Home - Vima-tech{% endblock %}
+
+{% block opengraph %}                 
+        <meta property="og:url" content="{{request.build_absolute_uri}}" />     
+        <meta property="og:site_name" content="Vima-tech" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:title" content="Vima-tech" />
+        <meta property="og:description" content="Azienda di sviluppo di software, realizzazione portali web, shop on line, web app e gestionali web based" />
+        <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static "img/logo.png" %}" />
+{% endblock %}
+        
+{% block meta_description %}Azienda di sviluppo di software, realizzazione portali web, shop on line, web app e gestionali web based{% endblock %}
+{% block meta_keywords %}Sviluppo software, web development, web programming, web design, seo, affaincamento sem, gestionali web based, web app, sviluppo python, framework django, siti, portali, e-commerce{% endblock %}
+
 {% block content %}        
         <div class="container">               
 	        <div class="container">

@@ -2,6 +2,20 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}Work - Vima-tech{% endblock %}
+
+{% block opengraph %}                 
+        <meta property="og:url" content="{{request.build_absolute_uri}}" />     
+        <meta property="og:site_name" content="Vima-tech" />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:title" content="Work" />
+        <meta property="og:description" content="Portfolio" />
+        <meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static "img/logo.png" %}" />
+{% endblock %}
+        
+{% block meta_description %}Tutti i progetti realizzati dalla Vima {% endblock %}
+{% block meta_keywords %}Portfolio, Work, Siti, portali, E-commerce, Software, Gestionali, Web Based, Totem informativi{% endblock %}
+
 {% block content %}
 <div id="work">
         <div class="container">                

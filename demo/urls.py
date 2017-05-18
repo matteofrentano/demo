@@ -26,5 +26,6 @@ urlpatterns = [
         url(r'^about/$', views.about,name="about"),   
         url(r'^work/$',views.work,name="work"), 
         url(r'^contact/$',views.contact,name="contact"), 
+        url(r'^privacy/$',views.privacy,name="privacy"),
         
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

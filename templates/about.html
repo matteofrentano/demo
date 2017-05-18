@@ -2,6 +2,20 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}About - Vima-tech{% endblock %}
+
+{% block opengraph %}                 
+	<meta property="og:url" content="{{request.build_absolute_uri}}" />	
+	<meta property="og:site_name" content="Vima-tech" />
+	<meta property="og:locale" content="it_IT" />
+	<meta property="og:title" content="About" />
+	<meta property="og:description" content="Quello che offriamo" />
+	<meta property="og:image" content="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% static "img/logo.png" %}" />
+{% endblock %}
+	
+{% block meta_description %}Tutti i servizi offerti dalla Vima ed i relativi settori d'impiego{% endblock %}
+{% block meta_keywords %}Servizi, Web design, Web programming, Web development, SEO, Affiancamento SEM, Ottimizzazione Serp, Arduino, Consulenze IT, Sviluppo Software,{% endblock %}
+
 {% block content %}
         <div class="container about-pag">
                 <div class="row tit">

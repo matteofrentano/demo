@@ -38,3 +38,8 @@ def contact(request):
                                 'page':'contact',
                                 'contenuto':contenuto,
                                 })
+                                
+def privacy(request):
+        return render(request,'privacy.html',{
+                                'page':'contatti',
+                                })

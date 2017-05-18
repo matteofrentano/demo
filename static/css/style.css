@@ -292,6 +292,57 @@ ul.menu-footer > li.active{
 	margin-bottom: 8px;
 	font-size: 18px;
 }
+#privacy{
+	color: #fff;
+}
+a.privacy{
+	color: #fff;
+}
+a.privacy, a.privacy:hover{
+	text-decoration:none;
+	font-weight:bold;color:#fff;
+}
+.title-privacy{
+	color:#1F3763;
+	font-size:36px;
+	text-transform:capitalize;
+}
+.subtitle-privacy{
+	margin-top:30px;
+	margin-bottom:30px;
+	font-size:24px;
+}
+.tit-parag-policy{
+	margin-top:10px;
+	color:#1F3763;
+	font-size:18px;
+	font-weight:bold;
+}
+.testo-parag-policy{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.link-corpo{
+	margin: 50px;
+}
+.link-corpo a{
+	color:#fff;
+	padding:10px 20px;
+	text-decoration:none;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:700;
+	border:2px solid #fff;
+}
+.btn-invia-contatti{
+	text-decoration:none;
+	color:#fff;
+	border:1px solid #fff;
+	padding:4px 12px;
+	background:none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 #google-map > iframe {
 	position: absolute;
 	top: 5%;
