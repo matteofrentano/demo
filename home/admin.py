@@ -38,3 +38,16 @@ class WorkAdmin(admin.ModelAdmin):
     
 
 admin.site.register(Work,WorkAdmin)
+
+class ContactAdmin(admin.ModelAdmin):
+    save_on_top = True
+    def has_add_permission(self, request):
+        base_add_permission = super(ContactAdmin, self).has_add_permission(request)
+        if base_add_permission:
+            # if there's already an entry, do not allow adding
+            count = Contact.objects.all().count()
+            if count == 0:
+                return True
+        return False
+
+admin.site.register(Contact,ContactAdmin)

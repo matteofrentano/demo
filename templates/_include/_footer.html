@@ -31,8 +31,17 @@
 	                        </div>
 	                </div>
 	                <div class="row">
-	                        <p class="sub">&copy; 2017 Powered by <a class="brand" href="http://vima-tech.it" title="Sito Vima" target="_blank">Vima</a>. All rights reserved</p>
-	                        <p class="sub">Vima s.a.s. via Olmo di Riccio, 58 66034 Lanciano (Ch) p.iva: 02451480699 - rea: CH - 180021 | pec: amministrazione.vima@poste-certificate.it </p>
+	                        <p class="sub">&copy; {% now "Y" %} Powered by <a class="brand" href="http://vima-tech.it" title="Sito Vima" target="_blank">Vima</a>. All rights reserved</p>
+	                        <p class="sub">
+	                               {% if contact.nome_azienda %} {{contact.nome_azienda}} {% endif %}
+	                               {% if contact.indirizzo_azienda %}{{contact.indirizzo_azienda}} {% endif %},
+	                               {% if contact.civico_azienda %}{{contact.civico_azienda}}{% endif %} - 
+	                               {% if contact.cap %}{{contact.cap}}{% endif %}
+	                               {% if contact.comune %} {{contact.comune}} {% endif %}
+	                               {% if contact.provincia %} ({{contact.provincia}}{% endif %}) 
+	                               {% if contact.p_iva %} p.iva: {{contact.p_iva}} {% endif %}
+	                               {% if contact.numero_rea %} - rea: {{contact.numero_rea}}{% endif %}
+	                               {% if contact.pec %} | pec: {{contact.pec}} {% else %} {% if contact.email %} {{contact.email}}{%endif%}{%endif%} </p>
 	                </div>
 	        </div>       
 	</div>

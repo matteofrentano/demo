@@ -5,6 +5,12 @@ class Contenuto(models.Model):
     sottotitolo_home = models.TextField(max_length=100, blank=True,)
     testo_home = models.TextField(max_length=3000, blank=True,)   
     sottotesto_home = models.TextField(max_length=3000, blank=True,)
+    link_fb = models.CharField(max_length=100, blank=True,)
+    link_tw = models.CharField(max_length=100, blank=True,)
+    link_yt = models.CharField(max_length=100, blank=True,)
+    link_ig = models.CharField(max_length=100, blank=True,)
+    link_lk = models.CharField(max_length=100, blank=True,)
+    link_gp = models.CharField(max_length=100, blank=True,)
     try:        
         testo_footer= RichTextField(max_length=100000,blank=True,)
     except:
@@ -68,7 +74,25 @@ class Work(models.Model):
         return self.titolo_work
         
         
+class Contact(models.Model):   
+    nome_azienda = models.CharField(max_length=100, blank=True,)
+    indirizzo_azienda = models.CharField(max_length=100, blank=True,)
+    civico_azienda = models.CharField(max_length=100, blank=True,)
+    cap = models.CharField(max_length=5, blank=True,)
+    comune = models.CharField(max_length=100, blank=True,)
+    provincia = models.CharField(max_length=100, blank=True,)
+    tel = models.CharField(max_length=30, blank=True,)
+    email = models.EmailField(blank=True,)
+    p_iva = models.CharField(max_length=14,blank=True,)
+    numero_rea = models.CharField(max_length=14,blank=True,)
+    pec = models.EmailField(blank=True,)
+    
+    class Meta:
+        verbose_name="Contatti"
+        verbose_name_plural="Modifica i dati di contatto"
         
+    def __str__(self):
+        return 'Contatti'
         
         
         
