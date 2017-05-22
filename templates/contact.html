@@ -25,7 +25,7 @@
                                 <div class="text">
                                         {% if contact.nome_azienda %}<p>{{contact.nome_azienda}}</p>{% endif %}
                                         {% if contact.indirizzo_azienda %}<p>{{contact.indirizzo_azienda}}{% if contact.civico_azienda %}, <span>{{contact.civico_azienda}}</span>{% endif %}</p>{% endif %}
-                                        {% if contact.cap %}<p>{{contact.cap}}{% if contact.comune %}<span>{{contact.comune}} </span>{% endif %}{% if contact.provincia %}( <span>{{contact.provincia}} </span>){% endif %}</p>{% endif %}
+                                        {% if contact.cap %}<p>{{contact.cap}} {% if contact.comune %}<span>{{contact.comune}} </span>{% endif %}{% if contact.provincia %}(<span>{{contact.provincia}}</span>){% endif %}</p>{% endif %}
                                         {% if contact.tel %}<p>Tel: {{contact.tel}}</p>{% endif %}
                                         {% if contact.email %}<p>Mail: {{contact.email}}</p>{% endif %}
                                 </div>                                
