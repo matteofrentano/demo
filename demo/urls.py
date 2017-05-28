@@ -17,18 +17,23 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from home import views
+from home import views as view_home
+from about import views as view_about
+from work import views as view_work
+from contact import views as view_contact
 from django.conf.urls import include, url
 
 
 urlpatterns = [
         url(r'^admin/', admin.site.urls),
-        url(r'^$', views.home, name='home'),
-        url(r'^home/', views.home, name='home'),
-        url(r'^about/$', views.about,name="about"),   
-        url(r'^work/$',views.work,name="work"), 
-        url(r'^contact/$', views.contact, name="contact"), 
-        url(r'^privacy/$',views.privacy,name="privacy"),
+        url(r'^$', view_home.home, name='home'),
+        url(r'^home/', view_home.home, name='home'),
+        url(r'^about/$', view_about.about,name="about"),   
+        url(r'^work/$',view_work.work,name="work"), 
+        url(r'^contact/$', view_contact.contact, name="contact"), 
+        url(r'^privacy/$',view_contact.privacy,name="privacy"),
+        #url(r'^email/$', view_contact.email, name='email'),
+        #url(r'^thanks/$', view_contact.thanks, name='thanks'),
         
 
 

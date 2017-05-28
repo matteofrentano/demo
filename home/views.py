@@ -20,44 +20,6 @@ def home(request):
                               'page':'home',
                               },
                              RequestContext(request))                            
-
-def about(request):
-        contact = Contact.objects.first()
-        about = About.objects.first()
-        contenuto = Contenuto.objects.first() 
-        return render(request,'about.html',{
-                                'contact':contact,
-                                 'about':about,
-                                 'contenuto':contenuto,
-                                 'page':'about'
-                                 })    
                                  
-def work(request):
-        contact = Contact.objects.first()
-        work = Work.objects.all()
-        contenuto = Contenuto.objects.first() 
-        return render(request,'work.html',{
-                                'contact':contact,
-                                'work':work,
-                                'contenuto':contenuto,
-                                'page':'work'
-                                })
 
-def contact(request):
-        contact = Contact.objects.first()
-        contenuto = Contenuto.objects.first() 
-        return render(request,'contact.html',{
-                                'contact':contact,
-                                'contenuto':contenuto,
-                                'page':'contact'
-                                })
 
-                                
-def privacy(request):
-        contact = Contact.objects.first()
-        contenuto = Contenuto.objects.first() 
-        return render(request,'privacy.html',{
-                                'contact':contact,
-                                'contenuto':contenuto,
-                                'page':'contatti',
-                                })

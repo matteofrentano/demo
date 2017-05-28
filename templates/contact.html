@@ -14,41 +14,36 @@
 {% endblock %}
         
 {% block meta_description %}Sede e Contatti Vima{% endblock %}
-{% block meta_keywords %}Telefono, email, mappa, localizzazione{% endblock %}
+{% block meta_keywords %}Telefono, email, mappa, localizzazione, contatti, sede,{% endblock %}
 
 {% block content %}
 <div id="contatti">
-        <div class="container m-t-40">
-                <div class="row">
-                        <div class="col-md-5">
-                                <div class="tit">Contatti</div>
-                                <div class="text">
-                                        {% if contact.nome_azienda %}<p>{{contact.nome_azienda}}</p>{% endif %}
-                                        {% if contact.indirizzo_azienda %}<p>{{contact.indirizzo_azienda}}{% if contact.civico_azienda %}, <span>{{contact.civico_azienda}}</span>{% endif %}</p>{% endif %}
-                                        {% if contact.cap %}<p>{{contact.cap}} {% if contact.comune %}<span>{{contact.comune}} </span>{% endif %}{% if contact.provincia %}(<span>{{contact.provincia}}</span>){% endif %}</p>{% endif %}
-                                        {% if contact.tel %}<p>Tel: {{contact.tel}}</p>{% endif %}
-                                        {% if contact.email %}<p>Mail: {{contact.email}}</p>{% endif %}
-                                </div>                                
-                                <p class="text-right">Scrivici:</p>				
-                                <div class="col-xs-1 col-xs-offset-1 m-t-25"><input required type="checkbox"></div>
-                                <div class="col-xs-10 m-t-25">                              
-                                        <span>{% trans "Dichiaro di aver letto ed accettato l'informativa sulla" %} 
-                                                <a href="{% url 'privacy' %}" class="privacy" title="Privacy">{% trans "privacy" %} *</a>
-                                        </span>                                                                 
-                                </div> 
-                                <div class="col-xs-12 mg-t-40 text-right">
-                                        <button  type="submit" class="btn-invia-contatti text-right">{% trans "INVIA" %}</button>
-                                </div>                                                          
-                        </div>                                                            
-                        <div class="visible-xs" style="height:200px"></div>                           
-                                <div class="col-md-5 col-md-offset-2">
-                                <div id="google-map">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.908209522401!2d14.39202431573886!3d42.23777395080747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330fdc451199917%3A0x799e1694a9c8b65b!2sVima+Di+Vittorio+Lupinetti+%26+C.+Sas!5e0!3m2!1sit!2sit!4v1494563176605" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>                                 
-                        </div>
-                 </div>                
-         </div>
- </div>
+	<div class="container m-t-40">
+    	<div class="row">
+   			<div class="col-md-5 col-md-offset-1">
+           		<div class="tit">Contatti</div>                                                         
+       			<p class="scrivici">Scrivici:</p>		                
+                <form class="contact_form" role="form" action="" method="post">
+				    {% csrf_token %}
+				    {{ form.as_p }}
+				    <button type="submit" class="btn-invia-contatti">Invia</button>
+				</form>  														                                                                                    
+          	</div>		                                                 
+            <div class="col-md-5 col-md-offset-1">
+          		<div id="google-map">
+              		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.908209522401!2d14.39202431573886!3d42.23777395080747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1330fdc451199917%3A0x799e1694a9c8b65b!2sVima+Di+Vittorio+Lupinetti+%26+C.+Sas!5e0!3m2!1sit!2sit!4v1494563176605" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div> 
+				<div class="text text-right">
+                  {% if contact.nome_azienda %}<p>{{contact.nome_azienda}}</p>{% endif %}
+                  {% if contact.indirizzo_azienda %}<p>{{contact.indirizzo_azienda}}{% if contact.civico_azienda %}, <span>{{contact.civico_azienda}}</span>{% endif %}</p>{% endif %}
+                  {% if contact.cap %}<p>{{contact.cap}} {% if contact.comune %}<span>{{contact.comune}} </span>{% endif %}{% if contact.provincia %}(<span>{{contact.provincia}}</span>){% endif %}</p>{% endif %}
+                  {% if contact.tel %}<p>Tel: {{contact.tel}}</p>{% endif %}
+                  {% if contact.email %}<p>Mail: {{contact.email}}</p>{% endif %}
+           		</div>                                
+        	</div>
+       	</div>                
+	</div>
+</div>
  {% endblock %}
  
                 
