@@ -25,7 +25,7 @@ def contact(request):
                 from_email = form.cleaned_data['email']
                 message = form.cleaned_data['messaggio']
                 try:
-                    send_mail(subject, message, from_email, ['matteo.carabba@vima-tech.it'])
+                    send_mail(subject, message, from_email, ['matteo.carabba@vima-tech.it'], fail_silently=False,)
                 except BadHeaderError:
                     return HttpResponse('Ci spiace, deve esserci stato un errore')             
         return render(request,  'contact.html',{
